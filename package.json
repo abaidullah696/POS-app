@@ -1,0 +1,21 @@
+{
+  "name": "pos-self",
+  "version": "1.0.0",
+  "description": "pos mern app",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "seed": "node seeder.js"
+  },
+  "author": "Abaidullah",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "colors": "^1.4.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "mongoose": "^8.7.0",
+    "morgan": "^1.10.0"
+  }
+}
