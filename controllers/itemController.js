@@ -17,8 +17,11 @@ const addItemController = async (req, res) => {
     await newItem.save();
     res.status(201).send("Item Created Successfully");
   } catch (error) {
-    res.status(400).send("error", error);
     console.log(error);
+    res.status(400).json({
+      message: "Error occurred while adding the item",
+      error: error.message, // Return the error message in the response
+    });
   }
 };
 
