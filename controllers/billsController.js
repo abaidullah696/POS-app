@@ -12,6 +12,17 @@ const addBillsController = async (req, res) => {
   }
 };
 
+//get bills data
+const getBillsController = async (req, res) => {
+  try {
+    const bills = await billsModel.find();
+    res.send(bills);
+  } catch (error) {
+    res.send("Something went wrong");
+  }
+};
+
 module.exports = {
   addBillsController,
+  getBillsController,
 };
